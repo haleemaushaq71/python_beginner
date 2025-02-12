@@ -12,3 +12,13 @@ def get_choices():
 
 print(get_choices())
 
+
+def check_age(age):
+    return True if age>=18 else False
+
+print(f"The age is verified: {check_age(18)}")
+
+name="Blah"
+print(name)
+name.lower()
+print(name)

@@ -14,7 +14,7 @@ def intializer():
 
 def take_user_input():
     user_choice=input(f"Please select your option: {choices[0]}, {choices[1]}, {choices[2]}: ").lower()
-    if (user_choice==rock or user_choice==paper or user_choice==scissor):
+    if user_choice in choices:
         return user_choice
     else:
         user_choice=input("You did not choose a valid option! Choose again: ").lower()
@@ -22,6 +22,7 @@ def take_user_input():
 def declare_winner(user_choice, computer_choice):
     if user_choice==computer_choice:
         print("It is a tie")
+        return
     if user_choice== rock:
         if computer_choice==paper:
             print('Computer wins!')
